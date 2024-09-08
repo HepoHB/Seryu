@@ -2,11 +2,11 @@ package dev.nerohaziel.seryu.implementation;
 
 public interface IRegister{
     String name = "";
-    int status = 0;
+    int statusCode = 0;
 
-    int getStatus();
+    String getStatus();
 
-    void updateStatus();
+    void updateStatus(byte code);
 
     String getName();
 

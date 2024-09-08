@@ -1,5 +1,6 @@
 package dev.nerohaziel.seryu.entity;
 
+import dev.nerohaziel.seryu.core.Status;
 import dev.nerohaziel.seryu.implementation.IRegister;
 
 import java.util.ArrayList;
@@ -7,7 +8,7 @@ import java.util.List;
 
 public class Patient implements IRegister{
     private String name = "";
-    private int status = 0;
+    private byte statusCode = 0;
     private byte age = 0;
     private String gender = "";
 
@@ -27,18 +28,20 @@ public class Patient implements IRegister{
     }
 
     @Override
-    public int getStatus(){
-        return this.status;
+    public String getStatus(){
+        return Status.getStatus(statusCode).getStatusName();
+
     }
 
     @Override
-    public void updateStatus(){
+    public void updateStatus(byte statusCode){
+        this.statusCode = statusCode;
 
     }
 
     @Override
     public String getName(){
-        return this.name;
+        return name;
 
     }
 
