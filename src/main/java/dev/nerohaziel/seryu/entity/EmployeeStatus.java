@@ -22,6 +22,7 @@ public enum EmployeeStatus implements IStatusProvider {
     @Override
     public byte getStatusCode(){
         return statusCode;
+
     }
 
     @Override
