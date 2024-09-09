@@ -2,25 +2,22 @@ package dev.nerohaziel.seryu.entity;
 
 import dev.nerohaziel.seryu.implementation.IRegister;
 
-public class Medical implements IRegister{
+public class Medical extends Entity{
     public static int totalPacients = 0;
 
     //Dados Básicos//
     String name = "";
-    int statusCode = 0;
+    byte statusCode = 0;
 
-    @Override
-    public String getStatus() {
-        return "";
+    public Medical(String name){
+        super(name);
     }
 
     @Override
-    public void updateStatus(byte code) {
+    public String getStatus(){
+        return MedicalStatus.getStatus(statusCode).getStatusName();
+
 
     }
 
-    @Override
-    public String getName() {
-        return "";
-    }
 }

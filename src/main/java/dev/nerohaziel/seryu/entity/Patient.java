@@ -5,15 +5,13 @@ import dev.nerohaziel.seryu.implementation.IRegister;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Patient implements IRegister{
+public class Patient extends Entity{
     public static int totalPacients = 0;
 
     //Dados Básicos//
-    private String name = "";
     private byte statusCode = 0;
     private byte age = 0;
     private String gender = "";
-    private int pacientCode = 0;
 
     //Estilo de Vida//
     private boolean sexLife;
@@ -31,16 +29,21 @@ public class Patient implements IRegister{
     private int responsibleMedicalCode;
 
     public Patient(String name, byte age, String gender){
-        this.name = name;
+        super(name);
         this.age = age;
         this.gender = gender;
-        this.pacientCode = totalPacients;
+        this.code = totalPacients;
         totalPacients++;
 
     }
 
-    public int getPacientCode(){
-        return pacientCode;
+    protected byte getAge(){
+        return age;
+
+    }
+
+    protected String getGender(){
+        return gender;
 
     }
 
@@ -50,15 +53,18 @@ public class Patient implements IRegister{
 
     }
 
-    @Override
-    public void updateStatus(byte statusCode){
-        this.statusCode = statusCode;
+    public void getRecord(){
+        System.out.println("-----Ficha do Paciente-----");
+        System.out.println("---------------------------");
+        System.out.println("Nome: " + getName());
+        System.out.println("Idade: " + getAge());
+        System.out.println("Gênero: " + getGender());
+        System.out.println("Código do Paciente: " + getCode());
+        System.out.println("---------------------------");
+        System.out.println("Situação: " + getStatus());
+        System.out.println("x-x-x-x-x-x-x-x-x-x-x-x-x-x");
 
-    }
 
-    @Override
-    public String getName(){
-        return name;
 
     }
 

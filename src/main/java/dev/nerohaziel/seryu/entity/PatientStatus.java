@@ -1,6 +1,8 @@
 package dev.nerohaziel.seryu.entity;
 
-public enum PatientStatus{
+import dev.nerohaziel.seryu.implementation.StatusProvider;
+
+public enum PatientStatus implements StatusProvider{
     WAITING((byte) 0,"Sala de Espera"),
     SCREENING((byte) 1,"Triagem"),
     APPOINTMENT((byte) 2,"Consulta"),
@@ -26,21 +28,20 @@ public enum PatientStatus{
 
     }
 
+    @Override
+    public byte getStatusCode(){
+        return statusCode;
+
+    }
+
     public String getStatusName(){
         return statusName;
 
     }
 
     public static PatientStatus getStatus(byte code){
-        for (PatientStatus status : PatientStatus.values()){
-            if(status.statusCode == code){
-                return status;
-
-            }
-
-        } throw new IllegalArgumentException("Status Inválido: " + code);
+        return StatusProvider.getStatus(code,PatientStatus.values());
 
     }
-    // Nota: Descobrir como colocar herança em ENUM para reaproveitar este método que se repete em "MedicalStatus"
 
 }
