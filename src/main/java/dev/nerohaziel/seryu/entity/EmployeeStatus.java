@@ -2,7 +2,7 @@ package dev.nerohaziel.seryu.entity;
 
 import dev.nerohaziel.seryu.implementation.StatusProvider;
 
-public enum MedicalStatus implements StatusProvider{
+public enum EmployeeStatus implements StatusProvider{
     WORKING((byte) 0,"Em Serviço"),
     HOLIDAY((byte) 1,"De Folga"),
     OUT((byte) 2,"Ausente"),
@@ -13,7 +13,7 @@ public enum MedicalStatus implements StatusProvider{
     private final byte statusCode;
     private final String statusName;
 
-    MedicalStatus(byte statusCode, String statusName){
+    EmployeeStatus(byte statusCode, String statusName){
         this.statusCode = statusCode;
         this.statusName = statusName;
 
@@ -30,8 +30,8 @@ public enum MedicalStatus implements StatusProvider{
 
     }
 
-    public static MedicalStatus getStatus(byte code){
-        return StatusProvider.getStatus(code, MedicalStatus.values());
+    public static EmployeeStatus getStatus(byte code){
+        return StatusProvider.getStatus(code, EmployeeStatus.values());
 
     }
 

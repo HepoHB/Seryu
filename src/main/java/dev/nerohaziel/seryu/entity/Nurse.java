@@ -1,14 +1,14 @@
 package dev.nerohaziel.seryu.entity;
 
-public class Secretary extends Entity{
-
-    public Secretary(String name){
+public class Nurse extends Entity{
+    public Nurse(String name) {
         super(name);
+
     }
 
     @Override
     public void getRecord(){
-        System.out.println("-----Ficha do/a/e Secretário/a/e-----");
+        System.out.println("-----Ficha do/a/e Enfermeiro/a/e-----");
         System.out.println("-------------------------------------");
         System.out.println("Nome: " + getName());
         System.out.println("Código de Identificação: " + getCode());
@@ -21,7 +21,7 @@ public class Secretary extends Entity{
     }
 
     @Override
-    public String getStatus(){
+    public String getStatus() {
         return EmployeeStatus.getStatus(statusCode).getStatusName();
 
     }

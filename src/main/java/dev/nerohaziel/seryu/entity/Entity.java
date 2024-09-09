@@ -17,6 +17,12 @@ public abstract class Entity implements IRegister{
 
     }
 
+
+    public byte getStatusCode(){
+        return statusCode;
+
+    }
+
     @Override
     public String getName(){
         return name;
@@ -27,6 +33,8 @@ public abstract class Entity implements IRegister{
         this.statusCode = statusCode;
 
     }
+
+    public abstract void getRecord();
 
     public abstract String getStatus();
 

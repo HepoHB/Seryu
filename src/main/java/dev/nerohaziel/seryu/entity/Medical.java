@@ -1,21 +1,32 @@
 package dev.nerohaziel.seryu.entity;
 
-import dev.nerohaziel.seryu.implementation.IRegister;
-
 public class Medical extends Entity{
     public static int totalPacients = 0;
 
     //Dados Básicos//
     String name = "";
-    byte statusCode = 0;
 
     public Medical(String name){
         super(name);
     }
 
     @Override
+    public void getRecord() {
+        System.out.println("-------Ficha do/a/e Médico/a/e-------");
+        System.out.println("-------------------------------------");
+        System.out.println("Nome: " + getName());
+        System.out.println("Código de Identificação: " + getCode());
+        System.out.println("-------------------------------------");
+        System.out.println("Situação: " + getStatus());
+        System.out.println("-------------------------------------");
+        System.out.println("x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x");
+        System.out.println(" ");
+
+    }
+
+    @Override
     public String getStatus(){
-        return MedicalStatus.getStatus(statusCode).getStatusName();
+        return EmployeeStatus.getStatus(statusCode).getStatusName();
 
 
     }

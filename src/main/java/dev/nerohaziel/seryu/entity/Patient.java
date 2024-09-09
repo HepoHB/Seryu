@@ -9,7 +9,6 @@ public class Patient extends Entity{
     public static int totalPacients = 0;
 
     //Dados Básicos//
-    private byte statusCode = 0;
     private byte age = 0;
     private String gender = "";
 
@@ -53,16 +52,19 @@ public class Patient extends Entity{
 
     }
 
+    @Override
     public void getRecord(){
-        System.out.println("-----Ficha do Paciente-----");
-        System.out.println("---------------------------");
+        System.out.println("--------Ficha do/a/e Paciente--------");
+        System.out.println("-------------------------------------");
         System.out.println("Nome: " + getName());
         System.out.println("Idade: " + getAge());
         System.out.println("Gênero: " + getGender());
-        System.out.println("Código do Paciente: " + getCode());
-        System.out.println("---------------------------");
+        System.out.println("Código de Identificação: " + getCode());
+        System.out.println("-------------------------------------");
         System.out.println("Situação: " + getStatus());
-        System.out.println("x-x-x-x-x-x-x-x-x-x-x-x-x-x");
+        System.out.println("-------------------------------------");
+        System.out.println("x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x");
+        System.out.println(" ");
 
 
 
