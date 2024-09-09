@@ -1,12 +1,9 @@
 package dev.nerohaziel.seryu.core;
 
-import dev.nerohaziel.seryu.entity.Medical;
-import dev.nerohaziel.seryu.entity.Nurse;
 import dev.nerohaziel.seryu.entity.Patient;
-import dev.nerohaziel.seryu.entity.Secretary;
+import dev.nerohaziel.seryu.manipulation.PatientManipulation;
 
 import java.util.ArrayList;
-import java.util.stream.Collectors;
 
 public class Main{
     public static void main(String[] args){
@@ -17,21 +14,29 @@ public class Main{
         Secretary secretary = new Secretary("Qiqi");
         secretary.getRecord();
 */
-        ArrayList<Patient> patients = new ArrayList<>();
-        patients.add(new Patient("Lumine",(byte) 18, "Mulher"));
-        patients.add(new Patient("Fischl",(byte) 18, "Mulher"));
-        patients.add(new Patient("Venti",(byte) 18, "Possivelmente Homem"));
-        patients.add(new Patient("Bennett",(byte) 17, "Homem"));
-        patients.get(1).getRecord();
-        for(Patient p : patients){
+
+        PatientManipulation.addPatient("Lumine",(byte) 18, "Mulher");
+        PatientManipulation.addPatient("Fischl",(byte) 18, "Mulher");
+        PatientManipulation.addPatient("Venti",(byte) 18, "Possivelmente Homem");
+        PatientManipulation.addPatient("Bennett",(byte) 17, "Homem");
+        PatientManipulation.addPatient("Jean",(byte) 22, "Mulher");
+
+        System.out.println("AQUI VAI BOMBA");
+        PatientManipulation.patients.get(3).updateStatus((byte) 7);
+        PatientManipulation.patients.get(1).updateStatus((byte) 7);
+
+        ArrayList<Patient> ICUPatients = PatientManipulation.filterArray((byte) 7);
+        /*for(Patient p : ICUPatients) {
             p.getRecord();
 
-        }
-        System.out.println("AQUI VAI BOMBA");
-        patients.get(3).updateStatus((byte) 7);
+        }*/
+        ArrayList<Patient> MedicalConsultation = PatientManipulation.filterArray((byte) 3);
+        /*for(Patient p : MedicalConsultation) {
+            p.getRecord();
 
-        ArrayList<Patient> ICUPatients =  patients.stream().filter(patient -> patient.getStatusCode() == (byte) 7).collect(Collectors.toCollection(ArrayList::new));
-        for(Patient p : ICUPatients){
+        }*/
+
+        for(Patient p : PatientManipulation.patients){
             p.getRecord();
 
         }

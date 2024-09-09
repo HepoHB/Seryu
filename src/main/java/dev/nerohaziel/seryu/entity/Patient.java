@@ -13,8 +13,8 @@ public class Patient extends Entity{
     private String gender = "";
 
     //Estilo de Vida//
-    private boolean sexLife;
     private boolean smokes;
+    private boolean sexLife;
     private boolean alcoholConsumption;
     private boolean obesity;
     private boolean pregnant;
@@ -23,6 +23,7 @@ public class Patient extends Entity{
     private List<String> symptons = new ArrayList<>();
     private List<String> surgeries = new ArrayList<>();
     private List<String> chronicDiseases = new ArrayList<>();
+    private List<String> continuousMeds = new ArrayList<>();
 
     //Outras Variáveis//
     private int responsibleMedicalCode;
@@ -36,19 +37,92 @@ public class Patient extends Entity{
 
     }
 
-    protected byte getAge(){
+    //Getters//
+    public byte getAge(){
         return age;
 
     }
-
-    protected String getGender(){
+    public String getGender(){
         return gender;
 
     }
-
     @Override
     public String getStatus(){
         return PatientStatus.getStatus(statusCode).getStatusName();
+
+    }
+    public boolean isSmokes(){
+        return smokes;
+
+    }
+    public boolean isSexLife(){
+        return sexLife;
+
+    }
+    public boolean isAlcoholConsumption(){
+        return alcoholConsumption;
+
+    }
+    public boolean isObesity(){
+        return obesity;
+
+    }
+    public boolean isPregnant(){
+        return pregnant;
+
+    }
+    public List<String> getSymptons(){
+        return symptons;
+
+    }
+    public List<String> getSurgeries(){
+        return surgeries;
+
+    }
+    public List<String> getchronicDiseases(){
+        return surgeries;
+
+    }
+    public List<String> getContinuousMeds(){
+        return continuousMeds;
+
+    }
+
+    //Setters//
+    public void setSmokes(boolean smokes){
+        this.smokes = smokes;
+
+    }
+    public void setSexLife(boolean sexLife){
+        this.sexLife = sexLife;
+
+    }
+    public void setAlcoholConsumption(boolean alcoholConsumption){
+        this.alcoholConsumption = alcoholConsumption;
+
+    }
+    public void setObesity(boolean obesity){
+        this.obesity = obesity;
+
+    }
+    public void setPregnant(boolean pregnant){
+        this.pregnant = pregnant;
+
+    }
+    public void setSymptons(String symptons) {
+        this.symptons.add(symptons);
+
+    }
+    public void setSurgeries(String surgeries) {
+        this.surgeries.add(surgeries);
+
+    }
+    public void setChronicDiseases(String chronicDiseases) {
+        this.chronicDiseases.add(chronicDiseases);
+
+    }
+    public void setContinuousMeds(String continuousMeds) {
+        this.continuousMeds.add(continuousMeds);
 
     }
 
@@ -63,6 +137,11 @@ public class Patient extends Entity{
         System.out.println("-------------------------------------");
         System.out.println("Situação: " + getStatus());
         System.out.println("-------------------------------------");
+        System.out.println("Vida Sexual Ativa: " + (isSexLife() ? "Sim" : "Não"));
+        System.out.println("Consumo de Tabaco: " + (isSmokes() ? "Sim" : "Não"));
+        System.out.println("Consumo de Álcool: " + (isAlcoholConsumption() ? "Sim" : "Não"));
+        System.out.println("Obesidade: " + (isObesity() ? "Sim" : "Não"));
+        System.out.println("Gravidez: " + (isPregnant() ? "Sim" : "Não"));
         System.out.println("x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x");
         System.out.println(" ");
 

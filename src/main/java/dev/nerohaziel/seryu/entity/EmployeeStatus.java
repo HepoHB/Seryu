@@ -1,8 +1,8 @@
 package dev.nerohaziel.seryu.entity;
 
-import dev.nerohaziel.seryu.implementation.StatusProvider;
+import dev.nerohaziel.seryu.implementation.IStatusProvider;
 
-public enum EmployeeStatus implements StatusProvider{
+public enum EmployeeStatus implements IStatusProvider {
     WORKING((byte) 0,"Em Serviço"),
     HOLIDAY((byte) 1,"De Folga"),
     OUT((byte) 2,"Ausente"),
@@ -31,7 +31,7 @@ public enum EmployeeStatus implements StatusProvider{
     }
 
     public static EmployeeStatus getStatus(byte code){
-        return StatusProvider.getStatus(code, EmployeeStatus.values());
+        return IStatusProvider.getStatus(code, EmployeeStatus.values());
 
     }
 

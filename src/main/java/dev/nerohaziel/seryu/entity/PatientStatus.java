@@ -1,8 +1,8 @@
 package dev.nerohaziel.seryu.entity;
 
-import dev.nerohaziel.seryu.implementation.StatusProvider;
+import dev.nerohaziel.seryu.implementation.IStatusProvider;
 
-public enum PatientStatus implements StatusProvider{
+public enum PatientStatus implements IStatusProvider {
     WAITING((byte) 0,"Sala de Espera"),
     SCREENING((byte) 1,"Triagem"),
     APPOINTMENT((byte) 2,"Consulta"),
@@ -40,7 +40,7 @@ public enum PatientStatus implements StatusProvider{
     }
 
     public static PatientStatus getStatus(byte code){
-        return StatusProvider.getStatus(code,PatientStatus.values());
+        return IStatusProvider.getStatus(code,PatientStatus.values());
 
     }
 
