@@ -6,6 +6,7 @@ import dev.nerohaziel.seryu.entity.Patient;
 import dev.nerohaziel.seryu.entity.Secretary;
 import dev.nerohaziel.seryu.manipulation.EmployeeManipulation;
 import dev.nerohaziel.seryu.manipulation.PatientManipulation;
+import dev.nerohaziel.seryu.view.PatientLog;
 import dev.nerohaziel.seryu.view.RecordView;
 
 public class Main{
@@ -29,6 +30,7 @@ public class Main{
             RecordView.getRecord(s);
 
         }
+        PatientLog.generateLog(PatientManipulation.patients.get(4));
 
     }
 

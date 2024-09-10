@@ -20,4 +20,6 @@ public class Medical extends Entity{
 
     }
 
+
+
 }

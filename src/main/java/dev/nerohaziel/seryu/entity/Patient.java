@@ -2,6 +2,8 @@ package dev.nerohaziel.seryu.entity;
 
 import dev.nerohaziel.seryu.implementation.IRegister;
 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -26,10 +28,7 @@ public class Patient extends Entity{
     private List<String> continuousMeds = new ArrayList<>();
 
     //Log//
-    private List<String>  patientInfo = new ArrayList<>();
-
-    //Outras Variáveis//
-    private int responsibleMedicalCode;
+    private List<Object>  patientInfo = new ArrayList<>(4);
 
     public Patient(String name, byte age, String gender){
         super(name);
@@ -90,7 +89,7 @@ public class Patient extends Entity{
         return continuousMeds;
 
     }
-    public List<String> getPatientInfo(){
+    public List<Object> getPatientInfo(){
         return patientInfo;
 
     }
@@ -132,8 +131,12 @@ public class Patient extends Entity{
         this.continuousMeds.add(continuousMeds);
 
     }
-    public void setPatientInfo(String patientInfo){
+    public void setPatientInfo(String patientInfo, byte function, int responsible){
         this.patientInfo.add(patientInfo);
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss");
+        this.patientInfo.add(LocalDateTime.now().format(formatter));
+        this.patientInfo.add(function);
+        this.patientInfo.add(responsible);
 
     }
 

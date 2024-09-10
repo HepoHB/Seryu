@@ -5,8 +5,6 @@ import dev.nerohaziel.seryu.entity.Nurse;
 import dev.nerohaziel.seryu.entity.Patient;
 import dev.nerohaziel.seryu.entity.Secretary;
 
-import java.util.ArrayList;
-
 public class RecordView{
     public static void getRecord(Patient patient){
         System.out.println("--------Ficha do/a/e Paciente--------");
