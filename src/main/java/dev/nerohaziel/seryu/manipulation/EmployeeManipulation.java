@@ -11,16 +11,16 @@ public class EmployeeManipulation{
     public static ArrayList<Secretary> secretaries = new ArrayList<>();
     public static ArrayList<Nurse> nurses = new ArrayList<>();
 
-    public static void addMedical(String name){
-        medicals.add(new Medical(name));
+    public static void addMedical(String name, String mail, String password){
+        medicals.add(new Medical(name, mail, password));
 
     }
-    public static void addNurse(String name){
-        nurses.add(new Nurse (name));
+    public static void addNurse(String name, String mail, String password){
+        nurses.add(new Nurse (name, mail, password));
 
     }
-    public static void addSecretary(String name){
-        secretaries.add(new Secretary(name));
+    public static void addSecretary(String name, String mail, String password){
+        secretaries.add(new Secretary(name, mail, password));
 
     }
 

@@ -54,15 +54,15 @@ public class ExampleDatabase{
         PatientManipulation.patients.get(7).setChronicDiseases("Asma");
 
 
-        EmployeeManipulation.addMedical("Baizhu");
+        EmployeeManipulation.addMedical("Baizhu","cobrasEEscadas@gmail.com","CobrinhaBacana");
         EmployeeManipulation.medicals.get(0).updateStatus((byte) 3);
-        EmployeeManipulation.addMedical("Albedo");
-        EmployeeManipulation.addNurse("Lisa");
+        EmployeeManipulation.addMedical("Albedo","GeoVision@yahoo.com","LoveSucrose");
+        EmployeeManipulation.addNurse("Lisa","LisaLisa@bol.com","AraAra");
         EmployeeManipulation.nurses.get(0).updateStatus((byte) 1);
-        EmployeeManipulation.addNurse("Sigewinne");
-        EmployeeManipulation.addSecretary("Qiqi");
+        EmployeeManipulation.addNurse("Sigewinne","Sigewinne@meropide.com","WeslleySenpai!");
+        EmployeeManipulation.addSecretary("Qiqi","TerrorOf5050@ig.com","ZombiesJustWannaDance");
         EmployeeManipulation.secretaries.get(0).updateStatus((byte) 5);
-        EmployeeManipulation.addSecretary("Katheryne");
+        EmployeeManipulation.addSecretary("Katheryne","Katheryne@adventuresguild.com","AdAstraAbyssosque");
 
     }
 

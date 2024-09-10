@@ -4,9 +4,10 @@ public class Medical extends Entity{
     public static int totalMedicals = 0;
 
     //Dados Básicos//
-    String name = "";
+     private String mail = "";
+    private String password = "";
 
-    public Medical(String name){
+    public Medical(String name, String mail, String password){
         super(name);
         this.code = totalMedicals;
         totalMedicals++;
@@ -20,6 +21,14 @@ public class Medical extends Entity{
 
     }
 
+    public String getPassword() {
+        return password;
 
+    }
+
+    public String getMail() {
+        return mail;
+
+    }
 
 }
