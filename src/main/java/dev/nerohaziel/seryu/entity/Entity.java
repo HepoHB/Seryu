@@ -12,7 +12,7 @@ public abstract class Entity implements IRegister{
 
     }
 
-    protected int getCode(){
+    public int getCode(){
         return code;
 
     }
@@ -33,8 +33,6 @@ public abstract class Entity implements IRegister{
         this.statusCode = statusCode;
 
     }
-
-    public abstract void getRecord();
 
     public abstract String getStatus();
 

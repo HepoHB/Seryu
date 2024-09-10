@@ -126,27 +126,4 @@ public class Patient extends Entity{
 
     }
 
-    @Override
-    public void getRecord(){
-        System.out.println("--------Ficha do/a/e Paciente--------");
-        System.out.println("-------------------------------------");
-        System.out.println("Nome: " + getName());
-        System.out.println("Idade: " + getAge());
-        System.out.println("Gênero: " + getGender());
-        System.out.println("Código de Identificação: " + getCode());
-        System.out.println("-------------------------------------");
-        System.out.println("Situação: " + getStatus());
-        System.out.println("-------------------------------------");
-        System.out.println("Vida Sexual Ativa: " + (isSexLife() ? "Sim" : "Não"));
-        System.out.println("Consumo de Tabaco: " + (isSmokes() ? "Sim" : "Não"));
-        System.out.println("Consumo de Álcool: " + (isAlcoholConsumption() ? "Sim" : "Não"));
-        System.out.println("Obesidade: " + (isObesity() ? "Sim" : "Não"));
-        System.out.println("Gravidez: " + (isPregnant() ? "Sim" : "Não"));
-        System.out.println("x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x");
-        System.out.println(" ");
-
-
-
-    }
-
 }

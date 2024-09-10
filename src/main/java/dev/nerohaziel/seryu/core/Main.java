@@ -6,8 +6,7 @@ import dev.nerohaziel.seryu.entity.Patient;
 import dev.nerohaziel.seryu.entity.Secretary;
 import dev.nerohaziel.seryu.manipulation.EmployeeManipulation;
 import dev.nerohaziel.seryu.manipulation.PatientManipulation;
-
-import java.util.ArrayList;
+import dev.nerohaziel.seryu.view.RecordView;
 
 public class Main{
     public static void main(String[] args){
@@ -15,19 +14,19 @@ public class Main{
         ExampleDatabase.importExamples();
 
         for(Patient p : PatientManipulation.patients){
-            p.getRecord();
+            RecordView.getRecord(p);
 
         }
         for(Medical m : EmployeeManipulation.medicals){
-            m.getRecord();
+            RecordView.getRecord(m);
 
         }
         for(Nurse n : EmployeeManipulation.nurses){
-            n.getRecord();
+            RecordView.getRecord(n);
 
         }
         for(Secretary s : EmployeeManipulation.secretaries){
-            s.getRecord();
+            RecordView.getRecord(s);
 
         }
 
