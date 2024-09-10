@@ -25,6 +25,9 @@ public class Patient extends Entity{
     private List<String> chronicDiseases = new ArrayList<>();
     private List<String> continuousMeds = new ArrayList<>();
 
+    //Log//
+    private List<String>  patientInfo = new ArrayList<>();
+
     //Outras Variáveis//
     private int responsibleMedicalCode;
 
@@ -80,11 +83,15 @@ public class Patient extends Entity{
 
     }
     public List<String> getchronicDiseases(){
-        return surgeries;
+        return chronicDiseases;
 
     }
     public List<String> getContinuousMeds(){
         return continuousMeds;
+
+    }
+    public List<String> getPatientInfo(){
+        return patientInfo;
 
     }
 
@@ -121,8 +128,12 @@ public class Patient extends Entity{
         this.chronicDiseases.add(chronicDiseases);
 
     }
-    public void setContinuousMeds(String continuousMeds) {
+    public void setContinuousMeds(String continuousMeds){
         this.continuousMeds.add(continuousMeds);
+
+    }
+    public void setPatientInfo(String patientInfo){
+        this.patientInfo.add(patientInfo);
 
     }
 
