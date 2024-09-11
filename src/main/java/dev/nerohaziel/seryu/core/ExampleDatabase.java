@@ -39,13 +39,16 @@ public class ExampleDatabase{
         PatientManipulation.patients.get(4).setSymptons("Febre Alta");
         PatientManipulation.patients.get(4).setSymptons("Cansaço Extremo");
         PatientManipulation.patients.get(4).setSymptons("Desmaios Ocasionais");
-        PatientManipulation.patients.get(4).setPatientInfo("Após a triagem foi constatado que seus sintomas são provenientes do seu estilo de vida estressante e nada saudável.", (byte) 1, 1);
+        PatientManipulation.patients.get(4).setPatientInfo("Após a triagem foi constatado que seus sintomas são muito provavelmente provenientes do seu estilo de vida estressante e nada saudável.", (byte) 1, 1);
         PatientManipulation.patients.get(4).setPatientInfo("Após a consulta médica, a paciente foi encaminhada para a sala de infusão para repôr seus nutrientes perdidos e juntamente tomar um calmante", (byte) 2, 1);
 
         PatientManipulation.patients.get(4).updateStatus((byte) 3); // Sala de Infusão
         PatientManipulation.addPatient("Diluc",(byte) 23, "Masculino");
         PatientManipulation.patients.get(5),setAlcoholConsumption(true);
+        PatientManipulation.patients.get(5).setSexLife(true);
         PatientManipulation.patients.get(5).updateStatus((byte) 8); // Clínica de Especialidades
+        PatientManipulation.patients.get(5).setPatientInfo("O paciente constatou dor severa na região dos rins, portanto, será encaminhado para o Nefrologista.", (byte) 1, 1);
+        
         PatientManipulation.addPatient("Lynette ",(byte) 23, "Feminino");
         PatientManipulation.patients.get(6).updateStatus((byte) 12); // Visitante
         PatientManipulation.addPatient("Nero Haziel", (byte) 21, "Feminino");
