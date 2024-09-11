@@ -44,6 +44,7 @@ public class ExampleDatabase{
 
         PatientManipulation.patients.get(4).updateStatus((byte) 3); // Sala de Infusão
         PatientManipulation.addPatient("Diluc",(byte) 23, "Masculino");
+        PatientManipulation.patients.get(5),setAlcoholConsumption(true);
         PatientManipulation.patients.get(5).updateStatus((byte) 8); // Clínica de Especialidades
         PatientManipulation.addPatient("Lynette ",(byte) 23, "Feminino");
         PatientManipulation.patients.get(6).updateStatus((byte) 12); // Visitante
